@@ -2,9 +2,9 @@
 
 namespace Yaringa.Services {
     public class ContextService : IContextService {
-        private IApplicationStore _applicationStore;
+        private IAppStore _applicationStore;
 
-        public ContextService(IApplicationStore applicationStore) {
+        public ContextService(IAppStore applicationStore) {
             _applicationStore = applicationStore;
         }
 

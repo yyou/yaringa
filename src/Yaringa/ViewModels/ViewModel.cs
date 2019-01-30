@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Net.Http;
 using System.Threading.Tasks;
 
-using Yaringa.Models.Token;
 using Yaringa.Services;
 
 namespace Yaringa.ViewModels {
@@ -16,7 +14,6 @@ namespace Yaringa.ViewModels {
         public ViewModel() {
             DialogService = ViewModelLocator.Resolve<IDialogService>();
             NavigationService = ViewModelLocator.Resolve<INavigationService>();
-            var settingsService = ViewModelLocator.Resolve<IApplicationStore>();
         }
 
         /// <summary>

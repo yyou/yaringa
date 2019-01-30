@@ -2,19 +2,19 @@
 
 namespace Yaringa.Services {
     public class SettingsService : ISettingsService {
-        public SettingsService(IApplicationStore applicationStore) {
-            _applicationStore = applicationStore;
+        public SettingsService(IAppStore appStore) {
+            _appStore = appStore;
         }
 
         public String BaseUrl {
             get {
-                return _applicationStore.GetValueOrDefault<String>(nameof(BaseUrl));
+                return _appStore.GetValueOrDefault<String>(nameof(BaseUrl));
             }
             set {
-                _applicationStore.AddOrUpdateValue(nameof(BaseUrl), value);
+                _appStore.AddOrUpdateValue(nameof(BaseUrl), value);
             }
         }
 
-        private IApplicationStore _applicationStore;
+        private IAppStore _appStore;
     }
 }

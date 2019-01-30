@@ -5,3 +5,7 @@
 /src/Yaringa/bin
 /src/Yaringa/obj
 /src/.vs
+/src/packages
+/src/Yaringa.UnitTests/bin/Debug
+/src/Yaringa.UnitTests/obj/Debug
+/src/Yaringa.UnitTests/Yaringa.UnitTests.csproj.user

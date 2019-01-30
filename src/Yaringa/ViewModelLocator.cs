@@ -31,13 +31,10 @@ namespace Yaringa {
             _container.Register<INavigationService, NavigationService>();
             _container.Register<IDialogService, DialogService>();
             _container.Register<IDependencyService, Services.DependencyService>();
-            _container.Register<IApplicationStore, ApplicationStore>();
+            _container.Register<IAppStore, AppStore>();
             _container.Register<IContextService, ContextService>();
             _container.Register<ITokensClient, TokensClient>();
             _container.Register<ISettingsService, SettingsService>();
-
-            var settings = _container.Resolve<ISettingsService>();
-            _container.Register(typeof(string), settings.BaseUrl);
         }
 
         public static void RegisterSingleton<TInterface, T>() where TInterface : class where T : class, TInterface {

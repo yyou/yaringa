@@ -1,6 +1,4 @@
-﻿//NOTE that this file is NOT auto-generated.
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Net.Http;
 
 namespace Yaringa.Models.Token

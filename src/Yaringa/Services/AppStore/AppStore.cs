@@ -6,7 +6,7 @@ namespace Yaringa.Services {
     /// <summary>
     /// Wrapper class of Application.Current.Properties in Xamarin.Forms.
     /// </summary>
-    public class ApplicationStore : IApplicationStore {
+    public class AppStore : IAppStore {
         #region Public Methods
 
         public Task AddOrUpdateValue<T>(string key, T value) => AddOrUpdateValueInternal(key, value);

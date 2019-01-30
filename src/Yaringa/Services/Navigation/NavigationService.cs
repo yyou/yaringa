@@ -18,6 +18,9 @@ namespace Yaringa.Services {
         public ViewModel PreviousPageViewModel {
             get {
                 var mainPage = Application.Current.MainPage as CustomNavigationView;
+                if (mainPage == null) {
+                    return null;
+                }
                 var stack = mainPage.Navigation.NavigationStack;
                 if (stack.Count() < 2) {
                     return null;
@@ -30,6 +33,9 @@ namespace Yaringa.Services {
         public ViewModel CurrentPageViewModel {
             get {
                 var mainPage = Application.Current.MainPage as CustomNavigationView;
+                if (mainPage == null) {
+                    return null;
+                }
                 var stack = mainPage.Navigation.NavigationStack;
                 if (stack.Count() < 1) {
                     return null;
@@ -66,7 +72,7 @@ namespace Yaringa.Services {
         public async Task RemoveLastFromBackStackAsync() {
             var mainPage = Application.Current.MainPage as CustomNavigationView;
 
-            if (mainPage != null) {
+            if (mainPage != null && mainPage.Navigation.NavigationStack.Count > 1) {
                 var stack = mainPage.Navigation.NavigationStack;
                 var page = stack[stack.Count - 2];
                 mainPage.Navigation.RemovePage(page);
@@ -85,7 +91,7 @@ namespace Yaringa.Services {
 
             if (mainPage != null) {
                 var stack = mainPage.Navigation.NavigationStack;
-                for (int i = 0; i < stack.Count - 1; i++) {
+                for (int i = stack.Count - 2; i >= 0; i--) {
                     var page = stack[i];
                     mainPage.Navigation.RemovePage(page);
 
@@ -95,7 +101,7 @@ namespace Yaringa.Services {
             }
         }
 
-        public async Task PopUp() {
+        public async Task PopUpAsync() {
             var mainPage = Application.Current.MainPage as CustomNavigationView;
             if (mainPage != null) {
                 var stack = mainPage.Navigation.NavigationStack;

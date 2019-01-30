@@ -18,7 +18,6 @@ namespace Yaringa.Services {
         ViewModel CurrentPageViewModel { get; }
 
         Task InitializeAsync();
-            
 
         Task NavigateToAsync<TViewModel>() where TViewModel : ViewModel;
 
@@ -28,7 +27,7 @@ namespace Yaringa.Services {
 
         Task RemoveBackStackAsync();
 
-        Task PopUp();
+        Task PopUpAsync();
 
         Task ShowModalAsync<TViewModel>(object parameter) where TViewModel : ViewModel;
 

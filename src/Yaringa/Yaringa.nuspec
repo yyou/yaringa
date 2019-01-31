@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Yang You</authors>
+    <owners>Yang You</owners>
+    <licenseUrl>https://github.com/yyou/yaringa/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/yyou/yaringa</projectUrl>
+    <iconUrl>https://github.com/yyou/yaringa/blob/master/Icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A library for creating enterprise app based on Xamarin.Forms and eShopOnContainer project.</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags>Xamarin.Forms</tags>
+  </metadata>
+</package>

@@ -15,3 +15,6 @@ Project Yaringa tries to solve these issues by:
 3. Separate unit test project to cover the unit tests for infrastructure part.
 4. Create a project template for creating new app projects.
 5. Keep the whole project (Yaringa) simple.
+
+
+Icons made by [monkik](https://www.flaticon.com/authors/monkik) from [Flaticon](https://www.flaticon.com/) is licensed by [CC 3.0 BY](http://creativecommons.org/licenses/by/3.0/)

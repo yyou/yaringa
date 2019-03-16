@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
-
+using Xamarin.Forms;
+using Yaringa.Messenging;
 using Yaringa.Services;
 
 namespace Yaringa.ViewModels {
     /// <summary>
     /// Base class for all view models.
     /// </summary>
-    public abstract class ViewModel : ExtendedBindableObject {
+    public abstract class ViewModel : ExtendedBindableObject, IMessenger {
         protected readonly IDialogService DialogService;
         protected readonly INavigationService NavigationService;
 
@@ -89,6 +90,18 @@ namespace Yaringa.ViewModels {
                 DialogService.HideLoading(settings.BusyMessage);
                 throw;
             }
-        }        
+        }
+
+        public void Send<TMessage>(TMessage message) where TMessage : IMessage {
+            MessagingCenter.Send(this, typeof(TMessage).FullName, message);
+        }
+
+        public void Subscribe<TMessage>(Action<Object, TMessage> callback) where TMessage : IMessage {
+            MessagingCenter.Subscribe(this, typeof(TMessage).FullName, callback, null);
+        }
+
+        public void Unsubscribe<TMessage>() where TMessage : IMessage {
+            MessagingCenter.Unsubscribe<object, TMessage>(this, typeof(TMessage).FullName);
+        }
     }
 }

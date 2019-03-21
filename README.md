@@ -10,7 +10,7 @@ The mobile app project in eShopOnContainer provides a good demo project for buil
 
 Project Yaringa tries to solve these issues by:
 
-1. Separate the infrastructure part into a separate project (Yaringa) and publish it as nuget for sharing.
+1. Separate the infrastructure part into a separate project (Yaringa) and publish it as nuget for reuse.
 2. Organize the app with app's fuctions (modules).
 3. Separate unit test project to cover the unit tests for infrastructure part.
 4. Create a project template for creating new app projects.
